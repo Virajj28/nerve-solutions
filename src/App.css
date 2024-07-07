@@ -1,38 +1,189 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Google Sans", Roboto, arial, sans-serif;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  text-align: center;
+  background-color: white;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 15px;
+  font-weight: 600;
+  color: black;
+}
+
+.selector-container {
+  margin: 30px;
+}
+
+/* Toggler Views */
+.toggle-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: #717A94;
+  background-color: #F3F3F5;
+  border-radius: 18px;
+  padding: 5px 15px;
+  font-size: 15px;
+}
+
+.toggle-button {
+  padding: 15px 40px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: #F3F3F5;
+  color: #717A94;
+}
+
+.toggle-button.active {
+  background-color: #2850E7;
   color: white;
+  padding: 0 40px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Dates Dropdown */
+.date-dropdown {
+  width: 100%;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: 600;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Strategy Cards */
+.strategy-cards {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.strategy-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px 20px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 15px;
+  z-index: 0;
+}
+
+.strategy-count {
+  color: #717A94;
+  display: flex;
+  flex-direction: row;
+}
+
+.empty-view {
+  margin: 40px 0;
+}
+
+/* Custom Dropdown Styling*/
+.custom-dropdown {
+  position: relative;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 15px 20px;
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  z-index: 1;
+}
+
+.selected-value {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Options View */
+.options {
+  position: relative;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  margin-top: 10px;
+  z-index: 2;
+  max-height: 0;
+  overflow: hidden;
+  margin-bottom: 25px;
+  transition: max-height 0.3s ease-out;
+  padding: 0 15px;
+}
+
+.options.open {
+  max-height: none;
+}
+
+.option {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 15px 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-bottom: 6px;
+}
+
+.option:hover {
+  background-color: #f0f0f0;
+}
+
+.option.selected {
+  background-color: #e0e0e0;
+}
+
+/* Responsive UI  */
+@media (max-width: 768px) {
+
+  .toggle-button {
+    font-size: 16px;
+    padding: 10px 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .date-dropdown {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+
+  .strategy-card {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .toggle-button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .date-dropdown {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .strategy-card {
+    font-size: 14px;
+    padding: 8px 10px;
   }
 }
