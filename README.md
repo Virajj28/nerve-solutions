@@ -14,3 +14,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 --Empty State
 ![image](https://github.com/Virajj28/nerve-solutions/assets/71481611/c820b4ce-b068-4cb0-8681-1203c633e5dd)
 
+--Phone View
+![image](https://github.com/Virajj28/nerve-solutions/assets/71481611/aa7f6090-dbb6-4579-a78e-f6b83d06e822)
+
