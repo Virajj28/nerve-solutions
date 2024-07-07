@@ -31,7 +31,7 @@ function StrategiesView() {
       acc[strategy] = (acc[strategy] || 0) + 1;
       return acc;
     }, {});
-    return Object.entries(strategyCounts).map(([name, count]) => ({ name, count })).sort((a, b) => b.count - a.count);
+    return Object.entries(strategyCounts).map(([name, count]) => ({ name, count })).sort((a, b) => a.count - b.count);
   };
 
   // Store startegies in this variable wrt selected date by user

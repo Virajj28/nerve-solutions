@@ -155,13 +155,18 @@
 @media (max-width: 768px) {
 
   .toggle-button {
-    font-size: 16px;
+    font-size: 15px;
     padding: 10px 20px;
   }
 
   .date-dropdown {
     font-size: 16px;
     padding: 10px 15px;
+  }
+
+  .custom-dropdown, .options {
+    width: 80%;
+    margin-left: 40px; 
   }
 
   .strategy-card {
@@ -174,7 +179,8 @@
 
   .toggle-button {
     font-size: 14px;
-    padding: 8px 15px;
+    padding: 10px 15px;
+    width: 30%;
   }
 
   .date-dropdown {
@@ -185,5 +191,6 @@
   .strategy-card {
     font-size: 14px;
     padding: 8px 10px;
+    width: 80%;
   }
 }
